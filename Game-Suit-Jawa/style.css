@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #f9fafb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.container-game {
+  background-color: white;
+  border-radius: 16px;
+  padding: 30px 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.container-game h1 {
+  font-size: 1.8rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.container-game p {
+  margin: 0.5rem 0;
+  color: #374151;
+  font-size: 1rem;
+}
+
+#pilihanUser {
+  width: 100%;
+  padding: 12px 16px;
+  margin: 1rem 0;
+  font-size: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+#pilihanUser:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+#tombolMulai {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#tombolMulai:hover {
+  background-color: #1d4ed8;
+}
+
+#hasil {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #111827;
+}
+
+span {
+  font-weight: bold;
+  color: #10b981;
+}

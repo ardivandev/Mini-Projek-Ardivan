@@ -1,0 +1,160 @@
+/* style.css */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --light-bg: #f8fafc;
+  --card-bg: #ffffff;
+  --text: #1e293b;
+  --text-light: #64748b;
+  --border: #e2e8f0;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --radius-lg: 16px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--light-bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  line-height: 1.5;
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+}
+
+.container-kalkulator-umur {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container-kalkulator-umur:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: var(--primary);
+  margin-bottom: 1.75rem;
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: -0.5px;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+  color: var(--text);
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+input[type="date"] {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+  background-color: white;
+  color: var(--text);
+}
+
+input[type="date"]:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+#tombolCekUmur {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: var(--radius-md);
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+#tombolCekUmur:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+#tombolCekUmur:active {
+  transform: translateY(0);
+}
+
+#hasil {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text);
+  padding: 1rem;
+  background-color: #f1f5f9;
+  border-radius: var(--radius-sm);
+  margin-top: 1rem;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .container-kalkulator-umur {
+    padding: 1.75rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  input[type="date"],
+  #tombolCekUmur {
+    padding: 0.875rem;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#hasil {
+  animation: fadeIn 0.4s ease-out;
+}
