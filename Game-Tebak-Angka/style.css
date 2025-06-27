@@ -1,0 +1,188 @@
+/* style.css */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+  --primary: #4361ee;
+  --primary-light: #4895ef;
+  --secondary: #3f37c9;
+  --dark: #1a1a2e;
+  --light: #f8f9fa;
+  --success: #4cc9f0;
+  --warning: #f72585;
+  --radius: 12px;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: var(--dark);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 450px;
+}
+
+.game {
+  background: white;
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.game:hover {
+  transform: translateY(-5px);
+}
+
+h1 {
+  color: var(--secondary);
+  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #4361ee, #3f37c9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+#kesempatan {
+  display: inline-block;
+  background-color: var(--primary-light);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+}
+
+#hasil {
+  min-height: 1.8rem;
+  font-weight: 600;
+  margin: 1.5rem 0;
+  padding: 0.8rem;
+  border-radius: var(--radius);
+  background-color: rgba(72, 149, 239, 0.1);
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: var(--radius);
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+input[type="number"]:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+}
+
+#tombolPlay {
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: var(--radius);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(63, 55, 201, 0.3);
+}
+
+#tombolPlay:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(63, 55, 201, 0.4);
+}
+
+#tombolPlay:active {
+  transform: translateY(0);
+}
+
+/* Animations */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(-5px);
+  }
+  40%,
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+.shake {
+  animation: shake 0.4s ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.win {
+  animation: pulse 0.5s ease 3;
+  color: var(--success);
+}
+
+.lose {
+  color: var(--warning);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .game {
+    padding: 1.8rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  input[type="number"] {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+
+  #tombolPlay {
+    padding: 0.9rem;
+  }
+}
