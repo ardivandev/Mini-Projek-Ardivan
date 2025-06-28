@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  background-color: #ebebeb;
+}
+
+.container-color-picker {
+  width: 400px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.container-color-picker * {
+  margin: 0.8rem 0px;
+}
+
+.container-color-picker div {
+  width: 80%;
+  margin: 0.8rem auto;
+  height: 80px;
+  border: 1px solid black;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.container-color-picker p {
+  letter-spacing: 0.3rem;
+}
