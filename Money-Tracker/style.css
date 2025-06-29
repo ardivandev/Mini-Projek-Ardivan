@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  border: none;
+  outline: none;
+}
+
+.container {
+  padding: 20px;
+}
+
+.container * {
+  margin: 1rem 0px;
+}
+
+.container h1 {
+  text-align: center;
+}
+
+.form-tambah-transaksi,
+.daftar-transaksi {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.form-tambah-transaksi form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-tambah-transaksi form input,
+.form-tambah-transaksi form select,
+.form-tambah-transaksi form button {
+  padding: 10px 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.form-tambah-transaksi form button {
+  background-color: #3a7cf5;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.form-tambah-transaksi form button:hover {
+  background-color: #2b59ad;
+}
+
+.daftar-transaksi table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+.daftar-transaksi table thead tr th,
+.daftar-transaksi table tbody tr td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.hapus {
+  padding: 7px 7px;
+  background-color: #eb1f3e;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.hapus:hover {
+  background-color: #c21932;
+}

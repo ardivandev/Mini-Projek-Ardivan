@@ -1,0 +1,51 @@
+Project: Aplikasi Manajemen Keuangan Sederhana (Money Tracker)**
+📋 Fitur Aplikasi:
+
+➕ Tambah Transaksi:
+* User isi form:
+  * Nama Transaksi (string)
+  * Nominal (number)
+  * Jenis: "Pemasukan" / "Pengeluaran" (pakai `<select>` atau radio)
+* Setelah dikirim, tampilkan di daftar transaksi
+
+📄 Tampilkan Daftar Transaksi:
+* Buat tabel atau list (gunakan `forEach`) dari data array
+* Setiap item tampilkan:
+  * Nama
+  * Nominal
+  * Jenis
+  * Tombol "Hapus"
+
+💰 Total Uang:
+* Hitung total pemasukan dan pengeluaran
+* Hitung total saldo (pemasukan - pengeluaran)
+* Tampilkan semuanya ke halaman
+
+🧠 Struktur Data:
+let transaksi = [
+  { nama: "Gaji", nominal: 2000000, jenis: "pemasukan" },
+  { nama: "Makan", nominal: 50000, jenis: "pengeluaran" }
+];
+
+🎯 Fungsionalitas yang Harus Ada:
+| Fitur                  | Keterangan                                   |
+| ---------------------- | -------------------------------------------- |
+| Form input             | Tambah transaksi baru ke array               |
+| Validasi form          | Nama tidak boleh kosong, nominal harus angka |
+| Tampilkan data         | Gunakan `forEach()` dan DOM                  |
+| Total pemasukan/keluar | Hitung pakai looping + kondisi               |
+| Hapus transaksi        | Pakai `splice()` + render ulang              |
+
+🔧 Tools yang Harus Dipakai:
+* `document.getElementById()` / `querySelector()`
+* `addEventListener()`
+* `innerText`, `innerHTML`, `textContent`
+* `classList.add/remove/toggle`
+* Array & Object
+* Function & looping
+* Kondisional `if else`
+
+🔥 Bonus Challenge (opsional):
+* Tambahkan **fitur filter**: tampilkan hanya pemasukan/pengeluaran
+* Tambahkan **konfirmasi hapus**
+* Gunakan **localStorage** agar data tetap tersimpan

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Money Tracker</title>
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Money Tracker</h1>
+
+      <!-- Form Tambah Transaksi -->
+      <section class="form-tambah-transaksi">
+        <h2>Tambah Transaksi</h2>
+        <form action="" method="post" id="formTransaksi">
+          <label for="nama-transaksi">Nama Transaksi : </label>
+          <input type="text" id="nama-transaksi" />
+          <label for="nominal">Nominal : </label>
+          <input type="number" id="nominal" />
+          <label for="jenis">Jenis : </label>
+          <select id="jenis">
+            <option value="">Pilih Opsi</option>
+            <option value="pemasukan">Pemasukan</option>
+            <option value="pengeluaran">Pengeluaran</option>
+          </select>
+          <button type="submit">Tambah Transaksi</button>
+        </form>
+      </section>
+
+      <!-- Tampil Daftar Transaksi -->
+      <section class="daftar-transaksi">
+        <h2>Daftar Transaksi</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama</th>
+              <th>Nominal</th>
+              <th>Jenis</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="daftarTransaksi"></tbody>
+        </table>
+        <h3>Total Uang</h3>
+        <p>Total Pemasukan : <span id="totalPemasukan"></span></p>
+        <p>Total Pengeluaran : <span id="totalPengeluaran"></span></p>
+        <p>Total Saldo : <span id="totalSaldo"></span></p>
+      </section>
+    </main>
+
+    <!-- Javascript -->
+    <script src="script.js"></script>
+  </body>
+</html>
