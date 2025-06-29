@@ -51,7 +51,11 @@ function tampilDaftarTransaksi() {
     buttonHapus.textContent = "Hapus";
     buttonHapus.classList.add("hapus");
     buttonHapus.addEventListener("click", () => {
-      hapusTransaksi(index);
+      let confirms = confirm("Apakah yang ingin menghapus ?");
+      if (confirms) {
+        hapusTransaksi(index);
+      }
+      return;
     });
 
     td1.textContent = `${i}`;
